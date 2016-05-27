@@ -47,14 +47,14 @@ const newloader = Object.assign({}, cssloader, {
 
 config.module.loaders.push(newloader);
 cssloader.test =
-  new RegExp(`[^module]${cssloader.test.source}`)
-cssloader.loader = newloader.loader
+  new RegExp(`[^module]${cssloader.test.source}`);
+cssloader.loader = newloader.loader;
 
 config.module.loaders.push({
   test: /\.css$/,
   include: [modules],
   loader: 'style!css'
-})
+});
 
 
 
@@ -86,6 +86,14 @@ const defines =
 config.plugins = [
   new webpack.DefinePlugin(defines)
 ].concat(config.plugins);
+
+config.resolve.root = [src, modules];
+config.resolve.alias = {
+  'css': join(src, 'styles'),
+  'containers': join(src, 'containers'),
+  'components': join(src, 'components'),
+  'utils': join(src, 'utils')
+};
 
 
 module.exports = config;
