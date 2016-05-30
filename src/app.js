@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './styles.module.css';
 import 'font-awesome/css/font-awesome.css';
 
 import './app.css';
 
-import App from 'containers/App/App';
+import App from 'containers/App/App.js';
 
 const mountNode = document.querySelector('#root');
 ReactDOM.render(<App />, mountNode);
