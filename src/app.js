@@ -24,4 +24,4 @@ const routes = (
 
 
 const mountNode = document.querySelector('#root');
-ReactDOM.render(routes, mountNode);
+ReactDOM.render(<App history={browserHistory} routes={routes}/>, mountNode);
