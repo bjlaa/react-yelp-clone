@@ -1,0 +1,18 @@
+import React from 'react';
+import { browserHistory, Router, Route, Redirect } from 'react-router';
+
+const Home = React.createClass({
+	render: function() {
+		return (
+			<div>Hello World</div>
+		)
+	}
+});
+
+export const makeRoutes = () => (
+	<Router>
+		<Route path='/' component={Home} />
+	</Router>
+)
+
+export default makeRoutes;
