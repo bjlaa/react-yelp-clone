@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Router } from 'react-router';
+import { Router, Route } from 'react-router';
 
 class App extends React.Component {
 
